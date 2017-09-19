@@ -98,7 +98,7 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   gameInterval = 0;
-  EventTarget.removeEventListener('keydown');
+  window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
 
