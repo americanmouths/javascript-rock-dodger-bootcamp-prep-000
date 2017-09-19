@@ -108,10 +108,15 @@ function moveDodger(e) {
     e.preventDefault();
     e.stopPropagation();
   }
+  if (e.which === RIGHT_ARROW) {
+    moveDodgerRight();
+    e.preventDefault();
+    e.stopPropagation();
+  }
 }
 
 function moveDodgerLeft() {
-window.requestAnimationFrame(function() {
+window.requestAnimationFrame(Rfunction() {
 const left = positionToInteger(DODGER.style.left)
 
 if (left > 0) {
