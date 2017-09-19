@@ -98,8 +98,9 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  const rocks = document.createElement('div');
-  rocks.remove();
+  const rock = document.createElement('div');
+  ROCKS.push(rock);
+  ROCKS.remove();
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
