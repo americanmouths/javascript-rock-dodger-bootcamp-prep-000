@@ -86,6 +86,10 @@ if (top < GAME_HEIGHT) {
   // when there's a collision
   ROCKS.push(rock)
 
+  if (checkCollision(rock)) {
+    childNode.remove(rock)
+  }
+
   // Finally, return the rock element you've created
   return rock
 }
