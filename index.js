@@ -98,7 +98,6 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   gameInterval = 0;
-  childNode.remove(ROCKS);
   EventTarget.removeEventListener('keydown');
   alert("YOU LOSE!")
 }
