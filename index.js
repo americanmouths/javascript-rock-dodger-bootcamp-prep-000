@@ -98,11 +98,20 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   clearInterval(gameInterval)
-  document.removeEventListener('keydown', moveDodger);
+  window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
 
 function moveDodger(e) {
+  if (e.which === LEFT_ARROW) {
+    moveDodgerLeft();
+    e.preventDefault();
+    e.stopPropagation();
+  } else if (e.which === RIGHT.ARROW) {
+    moveDodgerRight();
+    e.preventDefault();
+    e.stopPropagation();
+  }
 }
 
 function moveDodgerLeft() {
