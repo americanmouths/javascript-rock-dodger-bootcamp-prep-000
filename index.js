@@ -97,6 +97,7 @@ if (top < GAME_HEIGHT) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  gameInterval = 0;
 }
 
 function moveDodger(e) {
