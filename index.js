@@ -67,7 +67,7 @@ if (checkCollision(rock)) {
 if (top < GAME_HEIGHT) {
    window.requestAnimationFrame(moveRock)
 } else {
-  childNode.remove(rock)
+  rock.remove()
 }
     /**
      * Otherwise, if the rock hasn't reached the bottom of
@@ -97,7 +97,8 @@ if (top < GAME_HEIGHT) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  window.removeEventListener('keydown', moveDodger);
+  clearInterval(gameInterval)
+  document.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
 
