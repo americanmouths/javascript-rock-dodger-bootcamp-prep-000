@@ -98,6 +98,9 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   gameInterval = 0;
+  childNode.remove(ROCKS);
+  EventTarget.removeEventListener('moveDodger');
+  alert("YOU LOSE!")
 }
 
 function moveDodger(e) {
