@@ -98,7 +98,7 @@ if (top < GAME_HEIGHT) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  $("ROCKS").remove();
+  window.parentNode.removeChild(ROCKS);
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!")
 }
